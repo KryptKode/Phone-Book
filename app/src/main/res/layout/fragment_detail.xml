@@ -1,0 +1,183 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/detail_root_layout"
+    tools:context="com.kryptkode.cyberman.phonebook.fragments.DetailFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/detail_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/detail_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:id="@+id/detail_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                app:layout_collapseMode="parallax"
+                app:srcCompat="@drawable/ic_contacts_black_24dp" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <GridLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/fab_margin"
+          android:columnCount="2"
+          android:useDefaultMargins="true"
+          >
+         <TextView
+             android:layout_column="0"
+             android:layout_row="0"
+             android:text="@string/detail_label_name"
+             style="@style/PhoneBookLabelTextView"
+             />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="0"
+              style="@style/PhoneBookTextView"
+              tools:text="Cyberman PaulXY Faraday"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="1"
+              android:text="@string/detail_label_nickname"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="1"
+              style="@style/PhoneBookTextView"
+              tools:text="Cyberman"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="2"
+              android:text="@string/detail_label_phone"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="2"
+              style="@style/PhoneBookTextView"
+              tools:text="+234 1 234 5678"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="3"
+              android:text="@string/detail_label_email"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="3"
+              style="@style/PhoneBookTextView"
+              tools:text="paul@cyberman.xy"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="4"
+              android:text="@string/detail_label_address"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="4"
+              style="@style/PhoneBookTextView"
+              tools:text="Plot 001, Paul Avenue, Mars, The Milky Way"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="5"
+              android:text="@string/detail_label_city"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="5"
+              style="@style/PhoneBookTextView"
+              tools:text="Mars Capital"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="6"
+              android:text="@string/detail_label_state"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="6"
+              style="@style/PhoneBookTextView"
+              tools:text="Mars State"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="7"
+              android:text="@string/detail_label_company"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="7"
+              style="@style/PhoneBookTextView"
+              tools:text="Cyberverse Technologies"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="8"
+              android:text="@string/detail_label_website"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="8"
+              style="@style/PhoneBookTextView"
+              tools:text="http://www.cyberverse.org"
+              />
+          <TextView
+              android:layout_column="0"
+              android:layout_row="9"
+              android:text="@string/detail_label_zipcode"
+              style="@style/PhoneBookLabelTextView"
+              />
+          <TextView
+              android:layout_column="1"
+              android:layout_row="9"
+              style="@style/PhoneBookTextView"
+              tools:text="234101"
+              />
+
+      </GridLayout>
+
+   </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
